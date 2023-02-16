@@ -1,0 +1,82 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce app</title>
+
+    {% load static %} {% tailwind_css %}
+
+    <!--GOOGLE FONTS-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!---------------->
+
+    <!--FONT AWESOME-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!---------------->
+
+    <!--SCRIPT FILE-->
+    <script src="{% static 'script/script.js' %}"></script>
+    <!--------------->
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body class="bg-zinc-800  leading-normal tracking-normal font-[Poppins]">
+    <!--NAVBAR-->
+
+    <nav class="p-5 bg-zinc-900 shadow md:flex md:items-center md:justify-between">
+      <div class="flex justify-between items-center">
+        <span
+          class="text-2xl text-white font-medium  cursor-pointer"
+        >
+          <img
+            class="h-5 mr-2 inline"
+            src="{% static 'images/logo.png' %}"
+            alt=""
+          />
+          Printables
+        </span>
+
+        <span class="text-2xl cursor-pointer text-white md:hidden block mx-2">
+            
+            <ion-icon name="grid-outline" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+
+      <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-zinc-900 w-full left-0 rounded-3xl md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+        <li class="mx-4 my-6 md:my-0">
+            <a href="{% url 'home' %}" class="text-xl text-white hover:text-cyan-500 duration-500">HOME</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+            <a href="{% url 'products' %}" class="text-xl text-white hover:text-cyan-500 duration-500">PRODUCTS</a>
+        </li>
+            
+        <li class="mx-4 my-7 md:my-0">
+            <a href="{% url 'customize' %}" class="text-xl text-white hover:text-cyan-500 duration-500">CUSTOMISE</a>
+        </li>
+            
+        <li class="mx-4 my-6 md:my-0">
+            <a href="{% url 'contacts' %}" class="text-xl text-white hover:text-cyan-500 duration-500">CONTACT</a>
+        </li>
+            
+        <span class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-3xl text-white hover:text-cyan-500 duration-500"><ion-icon name="cart-outline"></ion-icon></i></a>
+        </span>
+            
+
+        
+      </ul>
+    </nav>
+
+    {% block body %} {% endblock body %}
+  </body>
+</html>
