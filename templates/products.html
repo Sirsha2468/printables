@@ -21,15 +21,15 @@
 	<h3 class="section-title">Popular products</h3>
 </header>
 
+<div class="row">
 {% for product in products %}
 	
-<div class="row">
 	<div class="col-md-3">
 		<div class="card card-product-grid">
 			<a href="{% url 'product' product.pk %}" class="img-wrap"> <img src="{{ product.image.url }}"> </a>
 			<figcaption class="info-wrap">
 				<a href="{% url 'product' product.pk %}" class="title">{{product.name}}</a>
-				<div class="price mt-1">{{product.price}}</div> 
+				<div class="price mt-1">₹{{product.price}}</div> 
 			</figcaption>
 		</div>
 	</div>

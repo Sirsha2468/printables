@@ -1,14 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+html{
+    overflow-x: hidden;
+}
+
 .home_container{
     
     height: 80vh;
-background: rgb(2,0,36);
 
-background-image: repeating-conic-gradient(#0b0b13 0% 25%, #000000 0% 50%);
-
-background-position: 0 0, 32px 32px;
-background-size: 64px 64px;
-
-background-color: #000000;
 
     display: flex;
     justify-content: center;
@@ -19,7 +17,33 @@ background-color: #000000;
 }
 
 body{
-    background-color: black;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 100%);
+font-family: "Montserrat",sans-serif;
+background: radial-gradient(#fc208e3b, #4a22fa15);
+background-color: #000000;
+width: 100vw;
+height: 100vh;
+
+
+}
+
+.category_btn{
+    background: -webkit-linear-gradient(45deg,#ff2c6b, #3c3cfd);
+    border: none;
+    color: white;
+}
+
+
+.navvy{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgb(3, 0, 22) 0%, rgb(0, 0, 0) 100%);
+    border-bottom: none;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    margin-bottom: 20px;
+    z-index: 1000;
 }
 
 .text{
@@ -31,11 +55,22 @@ body{
         font-size: 5rem;
         font-weight:600;
         background: -webkit-linear-gradient(45deg,#ff2c6b, #1613f5);
+        -webkit-animation: glowing 1s ease-in-out infinite alternate;
+  -moz-animation: glowing 1s ease-in-out infinite alternate;
+  animation: glowing 1s ease-in-out infinite alternate;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: inline;
 
 }
+@-webkit-keyframes glowing {
+    from {
+      text-shadow: 0 0 10px #ffffff00, 0 0 10px rgba(255, 0, 255, 0), 0 0 20px rgba(255, 0, 234, 0.267), 0 0 30px #2300e600, 0 0 40px #0f00e65d, 0 0 30px #e6007354;
+    }
+    to {
+      text-shadow: 0 0 20px #ffffff00, 0 0 30px #ff4df6, 0 0 40px #e709b02c, 0 0 50px #ff4dd828, 0 0 60px #ff4daf34, 0 0 70px #4d59ff, 0 0 80px #ff4d8856;
+    }
+  }
 
  .customised2{
     color: rgb(255, 255, 255);
@@ -60,8 +95,12 @@ body{
     
 }
 
-.footer{
+.footies{
     
+   
+    bottom: 0;
+    left: 0;
+    padding: 10px;
     position: absolute;
     bottom: 0;
 }
@@ -93,8 +132,24 @@ body{
 .order_btn{
     border: none;
     width: 10rem;
+    border-radius: 2.5rem;
+
     background: -webkit-linear-gradient(45deg,#ff2c6b, #1613f5);
+    animation: animate1 1s linear infinite;
     color: white;
     padding: 15px;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    transition: all 1sec ease-in-out;
+}
+
+.order_btn:hover{
+    box-shadow: 0 0 100px 15px #2925ff73;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
 }

@@ -17,3 +17,17 @@ def product_details(request, pk):
     product = Product.objects.get(pk=pk)    
     context = {"product" : product}
     return render(request, 'product-detail.html', context)
+
+def stickers(request):
+    category = Category.objects.get(name="Stickers")
+    product = Product.objects.filter(category=category)
+    return render(request, 'products.html', {
+        "products" : product
+    })
+
+def posters(request):
+    category = Category.objects.get(name="Posters")
+    product = Product.objects.filter(category=category)
+    return render(request, 'products.html', {
+        "products" : product
+    })
