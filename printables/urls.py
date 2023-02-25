@@ -7,4 +7,5 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
+    path('product/<int:pk>', views.product_details, name="product")
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) 
