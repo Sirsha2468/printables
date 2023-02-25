@@ -1,13 +1,8 @@
 {% load static %}
 
-<!--============================HEADER STARTS-=======================-->
 <header class="navvy">
 <div class="nav-left">
-<div class="logo-div">
-    <a href="./" class="brand-wrap">
-        <img class="logo" style="width:120px" src="{% static 'images/home/logo.png' %}">
-    </a>
-</div>
+
 
 <div class="category-dropdown-div"><button type="button" class="category_btn btn  dropdown-toggle" data-toggle="dropdown"> 
             <i class="fa fa-bars"></i> All category 
@@ -20,12 +15,17 @@
             <a class="dropdown-item" href="#">Memorablilia </a>
         </div>
 </div>
+<div class="logo-div">
+    <a href="{% url 'home' %}" class="brand-wrap">
+        <img class="logo" style="width:120px" src="{% static 'images/home/logo.png' %}">
+    </a>
+</div>
 </div>
 
 <div class="nav-right">
 <div class="Sign-in-div"> 
-        <a class="sign-in text-white" href="./signin.html">Sign in</a> <span class="text-white"> | </span>
-        <a class="register text-white" href="./register.html"> Register</a>
+        <a class="sign-in text-white" href="{% url 'login' %}">Sign in</a> <span class="text-white"> | </span>
+        <a class="register text-white" href="{% url 'register' %}"> Register</a>
 </div>
 
 
