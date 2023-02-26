@@ -8,6 +8,12 @@ Printable is a onestop solutions for all your printing needs. From posters to st
  - [x] Register, login
  - [x] Cart box
  - [x] Filter
- - [x] Search bar     
-
+ ## Tech stack
+ - [x] HTML
+ - [x] CSS
+ - [x] Bootstrap
+ - [x] JavaScript
+ - [x] Django
+ - [x] Figma
+ - [x] Photoshop  
 
