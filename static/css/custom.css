@@ -28,12 +28,11 @@ width: 100vw;
 height: 100vh;
 }
 
-.category_btn{
-    background: -webkit-linear-gradient(45deg,#ff2c6b, #3c3cfd);
-    border: none;
-    color: white;
-}
 
+
+.product-bg{
+    background-color: rgba(255, 0, 0, 0);
+}
 
 .navvy{
     background: rgb(2,0,36);
@@ -136,8 +135,11 @@ background: linear-gradient(90deg, rgb(3, 0, 22) 0%, rgb(0, 0, 0) 100%);
 .category-dropdown-div{
     padding: 10px 0px;
     margin-left: 20px;
+    background: -webkit-linear-gradient(45deg,#ff2c6b, #1613f5);
     
 }
+
+.category_bt
 
 .logo-div{
     padding-top: 10px;
@@ -179,6 +181,7 @@ background: linear-gradient(90deg, rgb(3, 0, 22) 0%, rgb(0, 0, 0) 100%);
 
     .posters{
         width: 80vw;
+        background-color: #00000013;
     }
     .customised{
     
@@ -218,3 +221,13 @@ background: linear-gradient(90deg, rgb(3, 0, 22) 0%, rgb(0, 0, 0) 100%);
         left: 100%;
     }
 }
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
