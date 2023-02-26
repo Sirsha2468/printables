@@ -16,4 +16,6 @@ Printable is a onestop solutions for all your printing needs. From posters to st
  - [x] Django
  - [x] Figma
  - [x] Photoshop  
-
+## Sections
+- [x] All categories
+- [x]  
