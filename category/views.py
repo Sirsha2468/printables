@@ -19,5 +19,6 @@ def remove_from_cart(request, pk):
 
 @login_required()
 def cart(request):
+    cart_items = Cart.objects.filter(user=request.user)
     
     pass

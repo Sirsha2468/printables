@@ -64,9 +64,3 @@ def t_shirts(request):
         "products" : product
     })
 
-# def customise(request):
-#     # category = Category.objects.get(name="customise")
-#     # product = Product.objects.filter(category=category)
-#     return render(request, 'customise.html', {
-#         "products" : product
-#     })
