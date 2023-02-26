@@ -41,18 +41,32 @@ def posters(request):
     })
 
 
-def custom(request):
+def customise(request):
     if request.method == 'POST':
         form = CustomUploadForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             img_obj = form.instance
-            return render(request, 'custom.html', {
+            return render(request, 'customise.html', {
                 "img_obj": img_obj
             })
         else:
             form = CustomUploadForm()
     form = CustomUploadForm()
-    return render(request, 'custom.html', {
+    return render(request, 'customise.html', {
         "form": form
     })
+
+def t_shirts(request):
+    category = Category.objects.get(name="t-shirts")
+    product = Product.objects.filter(category=category)
+    return render(request, 'products.html', {
+        "products" : product
+    })
+
+# def customise(request):
+#     # category = Category.objects.get(name="customise")
+#     # product = Product.objects.filter(category=category)
+#     return render(request, 'customise.html', {
+#         "products" : product
+#     })
